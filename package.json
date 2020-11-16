@@ -1,0 +1,33 @@
+{
+  "name": "ecomerciar_project",
+  "version": "1.0.0",
+  "description": "Proyecto Practico",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "babel src --out-dir dist && copyfiles .env dist",
+    "dev": "nodemon src/index.js --exec babel-node",
+    "debug": "nodemon --inspect src/index.js --exec babel-node"
+  },
+  "author": "Leandro Seoane",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.8.3",
+    "@sendgrid/mail": "^6.5.3",
+    "babel-polyfill": "^6.26.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "bcryptjs": "^2.4.3",
+    "winston": "^3.2.1",
+    "express-mung": "^0.5.1",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.8.4",
+    "nodemon": "^2.0.2"
+  }
+}
