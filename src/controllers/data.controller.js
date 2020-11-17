@@ -24,8 +24,11 @@ export async function getImageData(req, res) {
             if(error) {
                 return console.dir(error);
             }
-            let data = JSON.parse(body)
-            res.json({data: slice(data, offset, offset+limit)})
+            let data = JSON.parse(body);
+            res.json({
+                data: slice(data, offset, offset+limit),
+                totalPages: Math.ceil(body.length / limit)
+            })
         });
         // res.redirect('https://jsonplaceholder.typicode.com/photos');
 
