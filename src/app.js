@@ -6,11 +6,12 @@ import DataRoutes from './routes/data';
 
 //initializition
 const app = express();
-
+const cors = require('cors')
 //Middleware
 app.use(morgan("combined"));
 app.use(json({limit: '50mb'}));
 
+app.use(cors())
 app.use(restLogging);
 
 app.use('/api/v1/auth', AuthRoutes);
