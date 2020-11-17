@@ -1,11 +1,10 @@
-import gridData from '../responses/grid.json';
-import imageData from '../responses/images.json'; 
+// import gridData from '../responses/grid.json';
+// import imageData from '../responses/images.json'; 
+var request = require('request');
 
 export async function getGridData(req, res) {
     try {
-        res.status(200).json({
-            data: gridData
-        });
+        res.redirect('https://jsonplaceholder.typicode.com/posts');
     } catch (error) {
         res.status(403).json({
             error: error,
@@ -16,9 +15,7 @@ export async function getGridData(req, res) {
 
 export async function getImageData(req, res) {
     try {
-        res.status(200).json({
-            data: imageData
-        });
+        res.redirect('https://jsonplaceholder.typicode.com/photos');
     } catch (error) {
         res.status(403).json({
             error: error,
